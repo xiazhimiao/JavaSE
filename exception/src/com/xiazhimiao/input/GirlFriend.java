@@ -1,5 +1,8 @@
 package com.xiazhimiao.input;
 
+import com.xiazhimiao.customexception.AgeOutOfBoundsException;
+import com.xiazhimiao.customexception.NameFormatException;
+
 public class GirlFriend {
     String name;
     int age;
@@ -27,7 +30,7 @@ public class GirlFriend {
     public void setName(String name) {
         //添加限制
         if(name.length()<2 || name.length()>10){
-            throw new RuntimeException();
+            throw new NameFormatException(name+"不符合规范，长度3-10");
         }
         this.name = name;
     }
@@ -47,7 +50,7 @@ public class GirlFriend {
     public void setAge(int age) {
         //添加限制
         if(age<18 || age>30){
-            throw new RuntimeException();
+            throw new AgeOutOfBoundsException(age+"不符合规范，18-30岁");
         }
         this.age = age;
     }

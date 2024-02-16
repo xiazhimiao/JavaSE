@@ -1,5 +1,8 @@
 package com.xiazhimiao.input;
 
+import com.xiazhimiao.customexception.AgeOutOfBoundsException;
+import com.xiazhimiao.customexception.NameFormatException;
+
 import java.util.Scanner;
 
 public class Text {
@@ -21,9 +24,11 @@ public class Text {
                 break;
             } catch (NumberFormatException e) {
                 System.out.println("年龄请输入数字");
-            } catch (RuntimeException e) {
-                System.out.println("姓名或年龄输入错误");
+            } catch (NameFormatException | AgeOutOfBoundsException e) {
+                e.printStackTrace();
             }
+
+
         }
         System.out.println(girlFriend);
 
