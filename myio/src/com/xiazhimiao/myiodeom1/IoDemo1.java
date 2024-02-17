@@ -16,5 +16,6 @@ public class IoDemo1 {
         //不停止程序
         while (true) {
         }
+    }
 
 }
