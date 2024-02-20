@@ -1,4 +1,4 @@
-daypackage com.xiazhimiao.myprintf;
+package com.xiazhimiao.myprintf;
 
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
