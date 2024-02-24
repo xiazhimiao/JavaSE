@@ -15,6 +15,7 @@ public class SendMessageDemo {
         String str = "你好，世界！！！";
         byte[] bytes = str.getBytes();
         InetAddress inetAddress = InetAddress.getByName("127.0.0.1");
+        //InetAddress inetAddress = InetAddress.getByName("172.17.0.3");
         int port = 10086;
 
         DatagramPacket dp = new DatagramPacket(bytes,bytes.length,inetAddress,port);

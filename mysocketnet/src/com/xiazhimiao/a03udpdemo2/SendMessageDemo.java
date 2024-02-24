@@ -27,6 +27,7 @@ public class SendMessageDemo {
             }
 
             byte[] bytes = s.getBytes();
+            //如果发送端，IP设置为255.255.255.255就会变成广播，发送给局域网内所有主机
             InetAddress inetAddress = InetAddress.getByName("127.0.0.1");
             int port = 10086;
 
